@@ -1,0 +1,27 @@
+body, html {
+    scroll-behavior: smooth;
+}
+
+nav button {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    transition: 1s;
+}
+nav button:hover {
+    background: rgb(93, 190, 93);
+    box-shadow: 0px 0px 15px green;
+    cursor: pointer;
+}
+nav button a {
+    text-decoration: none;
+    color: black;
+}
+
+#opportunites .card img {
+    width: 1150px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 5px rgb(63, 63, 63);
+}
