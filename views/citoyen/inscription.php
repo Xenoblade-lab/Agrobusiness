@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Agrobusiness Summit</title>
+    <script>
+      (function(){
+        try {
+          var t = localStorage.getItem('theme') || 'light';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch(e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="image/logo.jpg" alt="Agrobusiness Summit" class="logo">
+                    <span class="brand-text">Agrobusiness Summit</span>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.php" class="nav-link">Accueil</a>
+                    <a href="annuaire.php" class="nav-link">Annuaire</a>
+                    <a href="formations.php" class="nav-link">Formations</a>
+                    <a href="actualites.php" class="nav-link">Opportunités</a>
+                    <a href="networking.php" class="nav-link">Networking</a>
+                    <a href="inscription.php" class="nav-link active">Inscription</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Créer un compte</h1>
+                <p class="section-subtitle">Rejoignez la communauté Agrobusiness Summit</p>
+
+                <div class="search-section" style="max-width:600px;margin:0 auto;">
+                    <form id="inscriptionForm">
+                        <div style="display:grid;gap:12px;">
+                            <div style="display:grid;gap:6px;">
+                                <label for="fullname">Nom complet</label>
+                                <input type="text" id="fullname" name="fullname" placeholder="Votre nom complet" required style="padding:12px 15px;border:1px solid rgba(0,0,0,0.1);border-radius:10px;background:var(--section-bg);color:var(--text-color);">
+                            </div>
+                            <div style="display:grid;gap:6px;">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="vous@example.com" required style="padding:12px 15px;border:1px solid rgba(0,0,0,0.1);border-radius:10px;background:var(--section-bg);color:var(--text-color);">
+                            </div>
+                            <div style="display:grid;gap:6px;">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" id="password" name="password" placeholder="••••••••" required minlength="6" style="padding:12px 15px;border:1px solid rgba(0,0,0,0.1);border-radius:10px;background:var(--section-bg);color:var(--text-color);">
+                            </div>
+                            <div style="display:grid;gap:6px;">
+                                <label for="confirm">Confirmer le mot de passe</label>
+                                <input type="password" id="confirm" name="confirm" placeholder="••••••••" required minlength="6" style="padding:12px 15px;border:1px solid rgba(0,0,0,0.1);border-radius:10px;background:var(--section-bg);color:var(--text-color);">
+                            </div>
+                            <div style="display:flex;gap:10px;align-items:center;">
+                                <input type="checkbox" id="cgu" required>
+                                <label for="cgu">J'accepte les Conditions Générales d'Utilisation</label>
+                            </div>
+                            <div style="display:flex;gap:12px;justify-content:flex-end;margin-top:6px;">
+                                <button type="reset" class="btn btn-outline">Annuler</button>
+                                <button type="submit" class="btn btn-primary">S'inscrire</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                 <p style="text-align:center;margin-top:16px;opacity:.9;">
+                 Connectez-vous  ? <a href="register.php" class="nav-link" style="display:inline;">Connexion </a>
+                </p>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Agrobusiness Summit</h4>
+                    <p>Plateforme de référence pour l'agrobusiness en RDC</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="annuaire.php">Annuaire</a></li>
+                        <li><a href="formations.php">Formations</a></li>
+                        <li><a href="actualites.php">Actualités</a></li>
+                        <li><a href="networking.php">Networking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: contact@agrobusiness-rdc.com</p>
+                    <p>Tél: +243 XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agrobusiness Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+      document.getElementById('inscriptionForm').addEventListener('submit', function(e){
+        e.preventDefault();
+        var pw = document.getElementById('password').value.trim();
+        var cf = document.getElementById('confirm').value.trim();
+        if (pw !== cf) { alert('Les mots de passe ne correspondent pas.'); return; }
+        alert('Inscription envoyée (démo).');
+      });
+    </script>
+</body>
+</html>

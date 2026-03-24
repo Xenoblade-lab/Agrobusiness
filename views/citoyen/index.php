@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Agrobusiness Summit</title>
+    <script>
+      (function(){
+        try {
+          var t = localStorage.getItem('theme') || 'light';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch(e) {}
+      })();
+    </script>
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="image/logo.jpg" alt="Agrobusiness Summit" class="logo">
+                    <span class="brand-text">Agrobusiness Summit</span>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#accueil" class="nav-link active">Accueil</a>
+                    <a href="annuaire.php" class="nav-link">Annuaire</a>
+                    <a href="formations.php" class="nav-link">Formations</a>
+                    <a href="actualites.php" class="nav-link">Opportunités</a>
+                    <a href="networking.php" class="nav-link">Networking</a>
+                    <a href="inscription.php" class="nav-link">Inscription</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero" id="accueil">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="image/1314645.jpg" alt="Paysage agricole" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Agrobusiness Summit</h1>
+                        <p class="hero-subtitle">Plateforme de référence pour l'agrobusiness et le mentorat en RDC</p>
+                        <div class="hero-actions">
+                            <a href="#presentation" class="btn btn-primary">En savoir plus</a>
+                            <a href="annuaire.php" class="btn btn-outline">Explorer l'annuaire</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/17.jpg" alt="Formations agricoles" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Formations d'Excellence</h1>
+                        <p class="hero-subtitle">Développez vos compétences dans l'agriculture moderne</p>
+                        <div class="hero-actions">
+                            <a href="formations.php" class="btn btn-primary">Voir les formations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/18.jpg" alt="Opportunités d'affaires" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Opportunités d'Affaires</h1>
+                        <p class="hero-subtitle">Découvrez les subventions, appels d'offres et partenariats</p>
+                        <div class="hero-actions">
+                            <a href="actualites.php" class="btn btn-primary">Explorer les opportunités</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/19.jpg" alt="Produits agricoles" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Produits Agricoles</h1>
+                        <p class="hero-subtitle">Connectez-vous avec les producteurs et distributeurs locaux</p>
+                        <div class="hero-actions">
+                            <a href="produits.php" class="btn btn-primary">Voir les produits</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/9.jpg" alt="Réseautage agricole" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Réseautage Agricole</h1>
+                        <p class="hero-subtitle">Rejoignez notre communauté d'acteurs engagés</p>
+                        <div class="hero-actions">
+                            <a href="networking.php" class="btn btn-primary">Commencer le networking</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="image/11.jpg" alt="À propos de nous" class="hero-image">
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <h1 class="hero-title">À Propos de Nous</h1>
+                        <p class="hero-subtitle">Notre mission pour l'innovation et le développement durable</p>
+                        <div class="hero-actions">
+                            <a href="apropos.php" class="btn btn-primary">En savoir plus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" id="presentation">
+            <div class="container">
+                <div class="presentation-content">
+                    <h2 class="section-title">À propos d'Agrobusiness Summit</h2>
+                    <p class="section-subtitle">Notre mission est de connecter les acteurs de l'agrobusiness en RDC, favoriser l'innovation et le développement durable dans le secteur agricole.</p>
+                    <div class="presentation-grid">
+                        <div class="presentation-item">
+                            <i class="fas fa-handshake presentation-icon"></i>
+                            <h3>Réseautage</h3>
+                            <p>Connectez-vous avec des entreprises, experts et partenaires du secteur agricole.</p>
+                        </div>
+                        <div class="presentation-item">
+                            <i class="fas fa-graduation-cap presentation-icon"></i>
+                            <h3>Formation</h3>
+                            <p>Accédez à des formations de qualité pour développer vos compétences.</p>
+                        </div>
+                        <div class="presentation-item">
+                            <i class="fas fa-chart-line presentation-icon"></i>
+                            <h3>Opportunités</h3>
+                            <p>Découvrez les dernières opportunités, subventions et appels d'offres.</p>
+                        </div>
+                        <div class="presentation-item">
+                            <i class="fas fa-users presentation-icon"></i>
+                            <h3>Communauté</h3>
+                            <p>Rejoignez une communauté dynamique d'acteurs engagés.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats-section">
+            <div class="container">
+                <h2 class="section-title">Chiffres Clés</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="entreprises-count">150+</div>
+                        <div class="stat-label">Entreprises</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="formations-count">50+</div>
+                        <div class="stat-label">Formations</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="opportunites-count">200+</div>
+                        <div class="stat-label">Opportunités</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="utilisateurs-count">1000+</div>
+                        <div class="stat-label">Utilisateurs</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="modules">
+            <div class="container">
+                <h2 class="section-title">Accès Rapide aux Modules</h2>
+                <div class="modules-grid">
+                    <a href="annuaire.php" class="module-card">
+                        <i class="fas fa-building module-icon"></i>
+                        <h3>Annuaire</h3>
+                        <p>Découvrez les entreprises agricoles de la RDC</p>
+                    </a>
+                    <a href="formations.php" class="module-card">
+                        <i class="fas fa-graduation-cap module-icon"></i>
+                        <h3>Formations</h3>
+                        <p>Formez-vous aux meilleures pratiques agricoles</p>
+                    </a>
+                    <a href="actualites.php" class="module-card">
+                        <i class="fas fa-briefcase module-icon"></i>
+                        <h3>Opportunités</h3>
+                        <p>Accédez aux subventions et appels d'offres</p>
+                    </a>
+                    <a href="networking.php" class="module-card">
+                        <i class="fas fa-users module-icon"></i>
+                        <h3>Networking</h3>
+                        <p>Connectez-vous avec la communauté agricole</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Témoignages & Partenaires</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>"Agrobusiness Summit m'a permis de trouver des partenaires fiables pour développer mon exploitation."</p>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Jean Dupont" class="author-avatar">
+                                <div class="author-info">
+                                    <strong>Jean Dupont</strong>
+                                    <span>Agriculteur, Kinshasa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <p>"Les formations proposées sont d'excellente qualité et adaptées aux réalités locales."</p>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=50&width=50" alt="Marie Kabila" class="author-avatar">
+                                <div class="author-info">
+                                    <strong>Marie Kabila</strong>
+                                    <span>Entrepreneure agricole, Lubumbashi</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners-section">
+                    <h3>Nos Partenaires</h3>
+                    <div class="partners-grid">
+                        <div class="partner-logo">
+                            <img src="/placeholder.svg?height=60&width=120" alt="Partenaire 1">
+                        </div>
+                        <div class="partner-logo">
+                            <img src="/placeholder.svg?height=60&width=120" alt="Partenaire 2">
+                        </div>
+                        <div class="partner-logo">
+                            <img src="/placeholder.svg?height=60&width=120" alt="Partenaire 3">
+                        </div>
+                        <div class="partner-logo">
+                            <img src="/placeholder.svg?height=60&width=120" alt="Partenaire 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Agrobusiness Summit</h4>
+                    <p>Plateforme de référence pour l'agrobusiness en RDC</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="annuaire.php">Annuaire</a></li>
+                        <li><a href="formations.php">Formations</a></li>
+                        <li><a href="actualites.php">Actualités</a></li>
+                        <li><a href="networking.php">Networking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: contact@agrobusiness-rdc.com</p>
+                    <p>Tél: +243 XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agrobusiness Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+        }
+
+        // Auto-slide
+        setInterval(nextSlide, 5000);
+
+        // Load stats from JSON (placeholder for now)
+        fetch('/Agrobusiness/data/annuaire.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('entreprises-count').textContent = data.annuaire ? data.annuaire.length + '+' : '150+';
+            })
+            .catch(() => {});
+
+        fetch('/Agrobusiness/data/formations.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('formations-count').textContent = data.formations ? data.formations.length + '+' : '50+';
+            })
+            .catch(() => {});
+    </script>
+</body>
+</html>

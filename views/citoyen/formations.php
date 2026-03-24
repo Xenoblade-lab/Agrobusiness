@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations - Agrobusiness Summit</title>
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="image/logo.jpg" alt="Agrobusiness Summit" class="logo">
+                    <span class="brand-text">Agrobusiness Summit</span>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.php" class="nav-link">Accueil</a>
+                    <a href="annuaire.php" class="nav-link">Annuaire</a>
+                    <a href="formations.php" class="nav-link active">Formations</a>
+                    <a href="actualites.php" class="nav-link">Opportunités</a>
+                    <a href="networking.php" class="nav-link">Networking</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Formations d'Excellence</h1>
+                <p class="section-subtitle">Développez vos compétences dans l'agriculture moderne avec nos formations certifiées et adaptées aux réalités congolaises</p>
+
+                <div class="formations-filters">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Catégorie :</label>
+                        <select id="categoryFilter">
+                            <option value="">Toutes les catégories</option>
+                            <option value="agriculture-generale">Agriculture générale</option>
+                            <option value="elevage">Élevage</option>
+                            <option value="transformation">Transformation agroalimentaire</option>
+                            <option value="gestion">Gestion d'entreprise</option>
+                            <option value="numerique">Agriculture numérique</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="durationFilter">Durée :</label>
+                        <select id="durationFilter">
+                            <option value="">Toutes les durées</option>
+                            <option value="court">1-3 jours</option>
+                            <option value="moyen">1-3 semaines</option>
+                            <option value="long">1-6 mois</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="formatFilter">Format :</label>
+                        <select id="formatFilter">
+                            <option value="">Tous les formats</option>
+                            <option value="presentiel">Présentiel</option>
+                            <option value="en-ligne">En ligne</option>
+                            <option value="hybride">Hybride</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="formations-grid" id="formationsGrid">
+                    <!-- Les formations seront chargées dynamiquement -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats-section">
+            <div class="container">
+                <h2 class="section-title">Impact de nos formations</h2>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" id="formations-count">50+</div>
+                        <div class="stat-label">Formations disponibles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="participants-count">2000+</div>
+                        <div class="stat-label">Participants formés</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="certifications-count">95%</div>
+                        <div class="stat-label">Taux de certification</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="entreprises-count">150+</div>
+                        <div class="stat-label">Entreprises partenaires</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Témoignages de nos apprenants</h2>
+                <div class="formations-testimonials">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"Les formations m'ont permis d'améliorer considérablement mes techniques de culture. J'ai pu augmenter ma production de 40% grâce aux connaissances acquises."</p>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Marie Kabila" class="author-avatar">
+                                <div class="author-info">
+                                    <strong>Marie Kabila</strong>
+                                    <span>Agricultrice, Sud-Kivu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"La formation en gestion d'entreprise agricole m'a donné les outils nécessaires pour développer mon exploitation de manière durable."</p>
+                            <div class="testimonial-author">
+                                <img src="/placeholder.svg?height=60&width=60" alt="Joseph Mbeki" class="author-avatar">
+                                <div class="author-info">
+                                    <strong>Joseph Mbeki</strong>
+                                    <span>Entrepreneur agricole, Équateur</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="formations-cta">
+                    <h2>Prêt à développer vos compétences ?</h2>
+                    <p>Rejoignez notre communauté d'apprenants et bénéficiez de formations de qualité adaptées au contexte agricole congolais.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" id="inscriptionBtn">S'inscrire à une formation</button>
+                        <button class="btn btn-outline" id="contactBtn">Contacter nos formateurs</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Agrobusiness Summit</h4>
+                    <p>Plateforme de référence pour l'agrobusiness en RDC</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.php">Accueil</a></li>
+                        <li><a href="annuaire.php">Annuaire</a></li>
+                        <li><a href="actualites.php">Opportunités</a></li>
+                        <li><a href="networking.php">Networking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: contact@agrobusiness-rdc.com</p>
+                    <p>Tél: +243 XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agrobusiness Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Charger les données des formations
+        fetch('/Agrobusiness/data/formations.json')
+            .then(response => response.json())
+            .then(data => {
+                displayFormations(data.formations || []);
+            })
+            .catch(() => {
+                displayFormations([]);
+            });
+
+        function displayFormations(formations) {
+            const grid = document.getElementById('formationsGrid');
+            grid.innerHTML = '';
+
+            if (formations.length === 0) {
+                grid.innerHTML = '<p class="no-results">Aucune formation disponible pour le moment.</p>';
+                return;
+            }
+
+            formations.forEach(formation => {
+                const card = document.createElement('div');
+                card.className = 'formation-card';
+                card.innerHTML = `
+                    <div class="formation-header">
+                        <div class="formation-category">${formation.categorie}</div>
+                        <div class="formation-duration">${formation.duree}</div>
+                    </div>
+                    <div class="formation-content">
+                        <h3>${formation.titre}</h3>
+                        <p class="formation-description">${formation.description}</p>
+                        <div class="formation-meta">
+                            <span><i class="fas fa-calendar-alt"></i> ${formation.date_debut}</span>
+                            <span><i class="fas fa-map-marker-alt"></i> ${formation.lieu}</span>
+                            <span><i class="fas fa-users"></i> ${formation.capacite} places</span>
+                        </div>
+                        <div class="formation-price">
+                            <strong>${formation.prix} FC</strong>
+                            <span class="formation-format">${formation.format}</span>
+                        </div>
+                    </div>
+                    <div class="formation-actions">
+                        <button class="btn btn-outline">Voir détails</button>
+                        <button class="btn btn-primary">S'inscrire</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Filtres des formations
+        document.getElementById('categoryFilter').addEventListener('change', filterFormations);
+        document.getElementById('durationFilter').addEventListener('change', filterFormations);
+        document.getElementById('formatFilter').addEventListener('change', filterFormations);
+
+        function filterFormations() {
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const durationFilter = document.getElementById('durationFilter').value;
+            const formatFilter = document.getElementById('formatFilter').value;
+
+            fetch('/Agrobusiness/data/formations.json')
+                .then(response => response.json())
+                .then(data => {
+                    let filtered = data.formations || [];
+
+                    if (categoryFilter) {
+                        filtered = filtered.filter(f => f.categorie.toLowerCase().includes(categoryFilter));
+                    }
+
+                    if (durationFilter) {
+                        filtered = filtered.filter(f => f.duree_categorie === durationFilter);
+                    }
+
+                    if (formatFilter) {
+                        filtered = filtered.filter(f => f.format.toLowerCase().includes(formatFilter));
+                    }
+
+                    displayFormations(filtered);
+                });
+        }
+
+        // Actions des boutons CTA
+        document.getElementById('inscriptionBtn').addEventListener('click', () => {
+            alert('Fonctionnalité d\'inscription à implémenter');
+        });
+
+        document.getElementById('contactBtn').addEventListener('click', () => {
+            alert('Fonctionnalité de contact à implémenter');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+/* Variables de thème */
+:root {
+  /* Couleurs primaires pour l'agrobusiness */
+  --primary-green: #0f4001; /* Vert foncé pour l'agriculture */
+  --secondary-green: #317302; /* Vert principal */
+  --accent-orange: #c0f20c; /* Accent lime adapté au design */
+  --accent-blue: #2196F3; /* Bleu pour les liens */
+
+  /* Thème clair */
+  --bg-color: #f2f2f2;
+  --text-color: #212121;
+  --section-bg: #f2f2f2;
+  --card-bg: #FFFFFF;
+  --border-color: #E0E0E0;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #0f4001;
+  --btn-primary: #65a605;
+  --btn-outline: #FFFFFF;
+  --btn-outline-border: #65a605;
+}
+
+/* Thème sombre */
+[data-theme="dark"] {
+  /* Palette sombre adaptée */
+  --bg-color: #141414;
+  --text-color: #FFFFFF;
+  --section-bg: #1E293D;
+  --card-bg: #434343;
+  --border-color: #434343;
+  --shadow: rgba(255, 255, 255, 0.08);
+  /* Navbar toujours blanche en sombre */
+  --nav-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #141414;
+  /* Actions */
+  --btn-primary: #008B5F;
+  --btn-outline: #FFFFFF;
+  --btn-outline-border: #008B5F;
+  /* Optionnel: ajuster les verts en sombre si nécessaire */
+  --primary-green: #008B5F;
+  --secondary-green: #008B5F;
+}
+
+/* Overrides pour lisibilité du header en thème sombre (nav blanche) */
+[data-theme="dark"] .navbar .nav-link { color: #141414; }
+[data-theme="dark"] .navbar .nav-link:hover,
+[data-theme="dark"] .navbar .nav-link.active { color: var(--secondary-green); }
+[data-theme="dark"] .theme-toggle { color: #141414; }
+[data-theme="dark"] .nav-toggle span { background-color: #141414; }
+[data-theme="dark"] .brand-text { color: var(--primary-green); }
+
+/* Styles globaux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+  background-color: var(--section-bg);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-green);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--btn-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-green);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+.btn-outline {
+  background-color: var(--btn-outline);
+  color: var(--btn-outline-border);
+  border: 2px solid var(--btn-outline-border);
+}
+
+.btn-outline:hover {
+  background-color: var(--btn-outline-border);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+  }
+}

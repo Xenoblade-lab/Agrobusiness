@@ -1,0 +1,204 @@
+:root {
+  --primary-green: #2e7d32;
+  --secondary-green: #4caf50;
+  --bg-color: #f9f9f9;
+  --sidebar-bg: #2e7d32;
+  --sidebar-color: white;
+  --topbar-bg: #4caf50;
+  --topbar-color: white;
+  --bottombar-bg: #4caf50;
+  --bottombar-color: white;
+  --content-bg: white;
+  --box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--bg-color);
+  display: flex;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Sidebar */
+aside.sidebar {
+  width: 250px;
+  background-color: var(--sidebar-bg);
+  color: var(--sidebar-color);
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+}
+aside.sidebar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  user-select: none;
+}
+aside.sidebar nav a {
+  display: flex;
+  align-items: center;
+  padding: 12px 30px;
+  color: var(--sidebar-color);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+aside.sidebar nav a:hover,
+aside.sidebar nav a.active {
+  background-color: var(--primary-green);
+}
+aside.sidebar nav a i {
+  margin-right: 15px;
+  width: 20px;
+  text-align: center;
+}
+
+/* Main content container */
+.main-container {
+  margin-left: 250px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Topbar */
+header.topbar {
+  background-color: var(--topbar-bg);
+  color: var(--topbar-color);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--box-shadow);
+  user-select: none;
+}
+header.topbar .title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+header.topbar .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  user-select: none;
+  background: none;
+  border: none;
+  color: var(--topbar-color);
+}
+
+/* Content area */
+.content {
+  background-color: var(--content-bg);
+  padding: 25px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+.chart-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px 15px;
+  box-shadow: var(--box-shadow);
+  user-select: none;
+  max-height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.chart-box h3 {
+  margin: 0 0 10px 0;
+  color: var(--primary-green);
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.chart-box canvas {
+  flex-grow: 1;
+  max-height: 230px;
+  max-width: 100%;
+}
+
+/* Bottom Navigation Bar for Mobile */
+nav.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bottombar-bg);
+  color: var(--bottombar-color);
+  height: 55px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.15);
+  user-select: none;
+  z-index: 1000;
+}
+nav.bottom-nav a {
+  color: var(--bottombar-color);
+  text-align: center;
+  font-size: 1.1rem;
+  flex-grow: 1;
+  text-decoration: none;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+nav.bottom-nav a.active,
+nav.bottom-nav a:hover {
+  background-color: var(--primary-green);
+}
+nav.bottom-nav a i {
+  font-size: 1.4rem;
+}
+nav.bottom-nav a span {
+  font-size: 0.7rem;
+  margin-top: 2px;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  aside.sidebar {
+    position: fixed;
+    transform: translateX(-260px);
+    z-index: 1001;
+  }
+  aside.sidebar.active {
+    transform: translateX(0);
+  }
+  .main-container {
+    margin-left: 0;
+  }
+  header.topbar .menu-toggle {
+    display: block;
+  }
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  nav.bottom-nav {
+    display: flex;
+  }
+  .content {
+    padding-bottom: 70px; /* to avoid overlap with bottom nav */
+  }
+}
