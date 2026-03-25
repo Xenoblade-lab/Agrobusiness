@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion Formations - Agrobusiness Summit</title>
+  <link rel="stylesheet" href="styles/globals.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/formateur.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion Formations - Agrobusiness Summit</title>
+  <link rel="stylesheet" href="styles/globals.css" />
+  <link rel="stylesheet" href="styles/formateur.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <img src="image/logo.jpg" alt="Agrobusiness Logo" style="max-width: 160px; display: block; margin: 0 auto 20px auto;" />
+    </div>
+    <nav>
+      <a href="index.php"><i class="fas fa-home"></i>Accueil</a>
+      <a href="annuaire.php"><i class="fas fa-address-book"></i>Annuaire</a>
+      <a href="formations.php"><i class="fas fa-book"></i>Formations</a>
+      <a href="formation_plus.php" class="active"><i class="fas fa-cogs"></i>Gestion Formations</a>
+      <a href="actualites.php"><i class="fas fa-newspaper"></i>Opportunités</a>
+      <a href="networking.php"><i class="fas fa-users"></i>Networking</a>
+    </nav>
+  </aside>
+  <div class="main-container">
+    <header class="topbar">
+      <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+      <div class="title">Gestion des Formations</div>
+      <div></div>
+    </header>
+
+    <main class="content">
+      <section class="section control-panel">
+        <div class="container">
+          <div class="control-buttons">
+            <button class="btn btn-primary">Publier Formations</button>
+          </div>
+
+          <h2>Formations</h2>
+          <div class="control-buttons">
+            <button class="btn btn-outline">Ajouter Formation</button>
+            <button class="btn btn-outline">Modifier Formation</button>
+            <button class="btn btn-outline">Supprimer Formation</button>
+          </div>
+
+          <h2>Modules</h2>
+          <div class="control-buttons">
+            <button class="btn btn-outline">Ajouter Module</button>
+            <button class="btn btn-outline">Modifier Module</button>
+            <button class="btn btn-outline">Supprimer Module</button>
+          </div>
+
+          <h2>Vidéos</h2>
+          <div class="control-buttons">
+            <button class="btn btn-outline">Ajouter Vidéo</button>
+            <button class="btn btn-outline">Modifier Vidéo</button>
+            <button class="btn btn-outline">Supprimer Vidéo</button>
+          </div>
+
+          <h2>Quiz</h2>
+          <div class="control-buttons">
+            <button class="btn btn-outline">Ajouter Quiz</button>
+            <button class="btn btn-outline">Modifier Quiz</button>
+            <button class="btn btn-outline">Supprimer Quiz</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" id="bottomNav">
+      <a href="index.php"><i class="fas fa-home"></i><span>Accueil</span></a>
+      <a href="formations.php"><i class="fas fa-book"></i><span>Formations</span></a>
+      <a href="formation_plus.php" class="active"><i class="fas fa-cogs"></i><span>Gestion</span></a>
+      <a href="actualites.php"><i class="fas fa-newspaper"></i><span>Opportunités</span></a>
+      <a href="networking.php"><i class="fas fa-users"></i><span>Networking</span></a>
+    </nav>
+  </div>
+
+  <script>
+    const sidebar = document.getElementById('sidebar');
+    const menuToggle = document.getElementById('menuToggle');
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produits - Agrobusiness Summit</title>
+  <link rel="stylesheet" href="styles/globals.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <script>
+    (function(){ try{var t=localStorage.getItem('theme'); if(t){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();
+  </script>
+  <style>
+    /* Filtres */
+    .search-section form { display:flex; gap:12px; flex-wrap:wrap; }
+    .search-section input[type="text"],
+    .search-section select {
+      padding: 10px 12px; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px;
+      background: var(--card-bg); color: var(--text-color);
+    }
+    .products-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:16px; }
+    @media (max-width: 992px) { .products-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 640px) { .products-grid { grid-template-columns: 1fr; } }
+
+    /* Cartes produit */
+    .product-card { overflow:hidden; display:flex; flex-direction:column; }
+    .product-body { display:grid; gap:8px; }
+    .product-title { margin:0; color: var(--primary-green); font-size:1.05rem; }
+    .badge { padding:6px 10px; border-radius:999px; font-size:.85rem; font-weight:700; display:inline-block; }
+    .badge-cat { background: rgba(33,150,243,.12); color:#2196F3; }
+    .product-desc { margin:0; opacity:.85; color: var(--text-color); }
+    .card-actions { display:flex; gap:10px; justify-content:flex-end; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="image/logo.jpg" alt="Agrobusiness Summit" class="logo">
+                    <span class="brand-text">Agrobusiness Summit</span>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.php" class="nav-link active">Accueil</a>
+                    <a href="annuaire.php" class="nav-link">Annuaire</a>
+                    <a href="formations.php" class="nav-link">Formations</a>
+                    <a href="actualites.php" class="nav-link">Opportunités</a>
+                    <a href="networking.php" class="nav-link">Networking</a>
+                    <a href="inscription.php" class="nav-link">Inscription</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 class="section-title">Produits</h1>
+        <p class="section-subtitle">Découvrez les produits et services des entreprises agricoles</p>
+
+        <div class="search-section" style="margin-bottom:20px;">
+          <form method="GET" style="display:flex; gap:12px; flex-wrap:wrap;">
+            <input type="text" name="q" placeholder="Rechercher un produit..." style="flex:1; padding:10px 12px; border:1px solid rgba(0,0,0,0.1); border-radius:8px; background:var(--card-bg); color:var(--text-color);">
+            <select name="categorie" style="padding:10px 12px; border:1px solid rgba(0,0,0,0.1); border-radius:8px; background:var(--card-bg); color:var(--text-color);">
+              <option value="">Toutes les catégories</option>
+              <option value="Fruits">Fruits</option>
+              <option value="Légumes">Légumes</option>
+              <option value="Céréales">Céréales</option>
+              <option value="Autres">Autres</option>
+            </select>
+            <button type="submit" class="btn btn-primary">Filtrer</button>
+          </form>
+        </div>
+
+        <div class="products-grid">
+          <?php if (!empty($products)) : foreach ($products as $p) : ?>
+            <div class="card product-card">
+              <?php if (!empty($p['image'])): ?>
+                <img src="<?php echo htmlspecialchars($p['image']); ?>" alt="<?php echo htmlspecialchars($p['titre'] ?? ($p['nom'] ?? '')); ?>" style="width:100%; height:180px; object-fit:cover;">
+              <?php else: ?>
+                <div style="width:100%; height:180px; background:var(--section-bg);"></div>
+              <?php endif; ?>
+              <div class="card-body product-body">
+                <div style="display:flex; align-items:center; justify-content:space-between; gap:8px;">
+                  <h3 class="product-title">
+                    <?php echo htmlspecialchars($p['titre'] ?? ($p['nom'] ?? '')); ?>
+                  </h3>
+                  <?php if (!empty($p['prix'])): ?>
+                    <span class="status success" style="white-space:nowrap;"><?php echo htmlspecialchars($p['prix']); ?></span>
+                  <?php endif; ?>
+                </div>
+                <?php if (!empty($p['categorie'])): ?>
+                  <div class="badge badge-cat"># <?php echo htmlspecialchars($p['categorie']); ?></div>
+                <?php endif; ?>
+                <?php $desc = trim((string)($p['description'] ?? '')); $excerpt = mb_substr($desc, 0, 140) . (mb_strlen($desc) > 140 ? '…' : ''); ?>
+                <p class="product-desc"><?php echo htmlspecialchars($excerpt); ?></p>
+                <div class="card-actions">
+                  <a href="#" class="btn btn-outline">Voir</a>
+                </div>
+              </div>
+            </div>
+          <?php endforeach; else: ?>
+            <div class="card" style="padding:24px; grid-column: 1 / -1; text-align:center;">
+              <p style="margin:0; opacity:.85;">Aucun produit disponible pour le moment.</p>
+            </div>
+          <?php endif; ?>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Agrobusiness Summit</h4>
+                    <p>Plateforme de référence pour l'agrobusiness en RDC</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="annuaire.php">Annuaire</a></li>
+                        <li><a href="formations.php">Formations</a></li>
+                        <li><a href="actualites.php">Actualités</a></li>
+                        <li><a href="networking.php">Networking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: contact@agrobusiness-rdc.com</p>
+                    <p>Tél: +243 XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agrobusiness Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+        }
+
+        // Auto-slide
+        setInterval(nextSlide, 5000);
+
+        // Load stats from JSON (placeholder for now)
+        fetch('/Agrobusiness/data/annuaire.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('entreprises-count').textContent = data.annuaire ? data.annuaire.length + '+' : '150+';
+            })
+            .catch(() => {});
+
+        fetch('/Agrobusiness/data/formations.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('formations-count').textContent = data.formations ? data.formations.length + '+' : '50+';
+            })
+            .catch(() => {});
+    </script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Networking - Agrobusiness Summit</title>
+    <link rel="stylesheet" href="styles/globals.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="image/logo.jpg" alt="Agrobusiness Summit" class="logo">
+                    <span class="brand-text">Agrobusiness Summit</span>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.php" class="nav-link">Accueil</a>
+                    <a href="annuaire.php" class="nav-link">Annuaire</a>
+                    <a href="formations.php" class="nav-link">Formations</a>
+                    <a href="actualites.php" class="nav-link">Opportunités</a>
+                    <a href="networking.php" class="nav-link active">Networking</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Networking Agricole</h1>
+                <p class="section-subtitle">Connectez-vous avec la communauté agricole congolaise, partagez vos expériences et créez des partenariats durables</p>
+
+                <div class="networking-actions">
+                    <button class="btn btn-primary" id="createProfileBtn">
+                        <i class="fas fa-user-plus"></i> Créer mon profil
+                    </button>
+                    <button class="btn btn-outline" id="findConnectionsBtn">
+                        <i class="fas fa-search"></i> Trouver des connexions
+                    </button>
+                    <button class="btn btn-outline" id="joinGroupsBtn">
+                        <i class="fas fa-users"></i> Rejoindre des groupes
+                    </button>
+                </div>
+
+                <div class="networking-tabs">
+                    <button class="tab-btn active" data-tab="connections">Mes connexions</button>
+                    <button class="tab-btn" data-tab="groups">Groupes</button>
+                    <button class="tab-btn" data-tab="events">Événements</button>
+                    <button class="tab-btn" data-tab="messages">Messages</button>
+                </div>
+
+                <div class="networking-content">
+                    <div class="tab-content active" id="connections">
+                        <div class="connections-grid" id="connectionsGrid">
+                            <!-- Les connexions seront chargées dynamiquement -->
+                        </div>
+                    </div>
+                    <div class="tab-content" id="groups">
+                        <div class="groups-grid" id="groupsGrid">
+                            <!-- Les groupes seront chargés dynamiquement -->
+                        </div>
+                    </div>
+                    <div class="tab-content" id="events">
+                        <div class="events-grid" id="eventsGrid">
+                            <!-- Les événements seront chargés dynamiquement -->
+                        </div>
+                    </div>
+                    <div class="tab-content" id="messages">
+                        <div class="messages-list" id="messagesList">
+                            <!-- Les messages seront chargés dynamiquement -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Statistiques du Réseau</h2>
+                <div class="networking-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="members-count">2500+</div>
+                            <div class="stat-label">Membres actifs</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-handshake"></i></div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="connections-count">15000+</div>
+                            <div class="stat-label">Connexions établies</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-comments"></i></div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="discussions-count">5000+</div>
+                            <div class="stat-label">Discussions actives</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <div class="stat-info">
+                            <div class="stat-number" id="events-count">25+</div>
+                            <div class="stat-label">Événements/mois</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Groupes Populaires</h2>
+                <div class="popular-groups">
+                    <div class="group-card">
+                        <div class="group-header">
+                            <img src="image/1.jpg" alt="Agriculteurs Kinshasa" class="group-avatar">
+                            <div class="group-info">
+                                <h3>Agriculteurs de Kinshasa</h3>
+                                <p>Partagez vos expériences et techniques agricoles</p>
+                            </div>
+                        </div>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 450 membres</span>
+                            <span><i class="fas fa-comment"></i> 120 discussions</span>
+                        </div>
+                        <button class="btn btn-primary">Rejoindre</button>
+                    </div>
+                    <div class="group-card">
+                        <div class="group-header">
+                            <img src="image/5.jpg" alt="Éleveurs RDC" class="group-avatar">
+                            <div class="group-info">
+                                <h3>Éleveurs de la RDC</h3>
+                                <p>Échangez sur les meilleures pratiques d'élevage</p>
+                            </div>
+                        </div>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 320 membres</span>
+                            <span><i class="fas fa-comment"></i> 85 discussions</span>
+                        </div>
+                        <button class="btn btn-primary">Rejoindre</button>
+                    </div>
+                    <div class="group-card">
+                        <div class="group-header">
+                            <img src="image/6.jpg" alt="Exportateurs" class="group-avatar">
+                            <div class="group-info">
+                                <h3>Exportateurs Agricoles</h3>
+                                <p>Opportunités d'exportation et marchés internationaux</p>
+                            </div>
+                        </div>
+                        <div class="group-stats">
+                            <span><i class="fas fa-users"></i> 280 membres</span>
+                            <span><i class="fas fa-comment"></i> 95 discussions</span>
+                        </div>
+                        <button class="btn btn-primary">Rejoindre</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Agrobusiness Summit</h4>
+                    <p>Plateforme de référence pour l'agrobusiness en RDC</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="index.php">Accueil</a></li>
+                        <li><a href="annuaire.php">Annuaire</a></li>
+                        <li><a href="formations.php">Formations</a></li>
+                        <li><a href="actualites.php">Opportunités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: contact@agrobusiness-rdc.com</p>
+                    <p>Tél: +243 XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agrobusiness Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script>
+        // Gestion des onglets
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+
+        // Charger les données du networking
+        fetch('/Agrobusiness/data/networking.json')
+            .then(response => response.json())
+            .then(data => {
+                displayConnections(data.connections || []);
+                displayGroups(data.groups || []);
+                displayEvents(data.events || []);
+                displayMessages(data.messages || []);
+            })
+            .catch(() => {
+                console.log('Erreur lors du chargement des données networking');
+            });
+
+        function displayConnections(connections) {
+            const grid = document.getElementById('connectionsGrid');
+            grid.innerHTML = '';
+
+            if (connections.length === 0) {
+                grid.innerHTML = '<p class="no-results">Aucune connexion trouvée. Commencez par créer votre profil !</p>';
+                return;
+            }
+
+            connections.forEach(connection => {
+                const card = document.createElement('div');
+                card.className = 'connection-card';
+                card.innerHTML = `
+                    <div class="connection-header">
+                        <img src="${connection.avatar || '/placeholder.svg?height=60&width=60'}" alt="${connection.nom}" class="connection-avatar">
+                        <div class="connection-info">
+                            <h3>${connection.nom}</h3>
+                            <p class="connection-role">${connection.role}</p>
+                            <p class="connection-company">${connection.entreprise}</p>
+                        </div>
+                    </div>
+                    <div class="connection-actions">
+                        <button class="btn btn-outline btn-sm">Voir profil</button>
+                        <button class="btn btn-primary btn-sm">Contacter</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function displayGroups(groups) {
+            const grid = document.getElementById('groupsGrid');
+            grid.innerHTML = '';
+
+            if (groups.length === 0) {
+                grid.innerHTML = '<p class="no-results">Aucun groupe disponible.</p>';
+                return;
+            }
+
+            groups.forEach(group => {
+                const card = document.createElement('div');
+                card.className = 'group-card';
+                card.innerHTML = `
+                    <div class="group-header">
+                        <img src="${group.avatar || '/placeholder.svg?height=60&width=60'}" alt="${group.avatar}" class="group-avatar">
+                        <div class="group-info">
+                            <h3>${group.nom}</h3>
+                            <p>${group.description}</p>
+                        </div>
+                    </div>
+                    <div class="group-stats">
+                        <span><i class="fas fa-users"></i> ${group.membres} membres</span>
+                        <span><i class="fas fa-comment"></i> ${group.discussions} discussions</span>
+                    </div>
+                    <button class="btn btn-primary">Rejoindre</button>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function displayEvents(events) {
+            const grid = document.getElementById('eventsGrid');
+            grid.innerHTML = '';
+
+            if (events.length === 0) {
+                grid.innerHTML = '<p class="no-results">Aucun événement prévu.</p>';
+                return;
+            }
+
+            events.forEach(event => {
+                const card = document.createElement('div');
+                card.className = 'event-card';
+                card.innerHTML = `
+                    <div class="event-header">
+                        <div class="event-date">${event.date}</div>
+                        <div class="event-type">${event.type}</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>${event.titre}</h3>
+                        <p>${event.description}</p>
+                        <div class="event-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> ${event.lieu}</span>
+                            <span><i class="fas fa-clock"></i> ${event.heure}</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn btn-outline">Voir détails</button>
+                        <button class="btn btn-primary">Participer</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function displayMessages(messages) {
+            const list = document.getElementById('messagesList');
+            list.innerHTML = '';
+
+            if (messages.length === 0) {
+                list.innerHTML = '<p class="no-results">Aucun message.</p>';
+                return;
+            }
+
+            messages.forEach(message => {
+                const item = document.createElement('div');
+                item.className = 'message-item';
+                item.innerHTML = `
+                    <div class="message-header">
+                        <img src="${message.avatar || '/placeholder.svg?height=40&width=40'}" alt="${message.expediteur}" class="message-avatar">
+                        <div class="message-info">
+                            <strong>${message.expediteur}</strong>
+                            <span class="message-time">${message.date}</span>
+                        </div>
+                    </div>
+                    <div class="message-content">
+                        <p>${message.contenu}</p>
+                    </div>
+                `;
+                list.appendChild(item);
+            });
+        }
+
+        // Actions des boutons
+        document.getElementById('createProfileBtn').addEventListener('click', () => {
+            alert('Fonctionnalité de création de profil à implémenter');
+        });
+
+        document.getElementById('findConnectionsBtn').addEventListener('click', () => {
+            document.querySelector('[data-tab="connections"]').click();
+        });
+
+        document.getElementById('joinGroupsBtn').addEventListener('click', () => {
+            document.querySelector('[data-tab="groups"]').click();
+        });
+    </script>
+</body>
+</html>

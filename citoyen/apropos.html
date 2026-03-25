@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>À propos - Agrobusiness Summit</title>
+  <link rel="stylesheet" href="styles/globals.css">
+  <link rel="stylesheet" href="styles/components.css">
+  <script>
+    (function(){ try{var t=localStorage.getItem('theme'); if(t){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();
+  </script>
+  <style>
+    .about-section { background: var(--section-bg); padding: 60px 0; }
+    .about h2 { color: var(--primary-green); margin: 0 0 10px 0; }
+    .about p { margin: 0 0 12px 0; }
+    .about .card { background: var(--card-bg); border-radius: 12px; box-shadow: 0 8px 24px var(--shadow); padding: 24px; }
+    .about .grid { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media (max-width: 900px) { .about .grid { grid-template-columns: 1fr; } }
+    .about .muted { color: var(--text-color); opacity: .85; }
+    .about h3 { color: var(--secondary-green); margin-top: 8px; }
+    .about ul { padding-left: 18px; }
+    .about li { margin: 6px 0; }
+    .toc { display:flex; gap:10px; flex-wrap:wrap; margin: 8px 0 18px 0; }
+    .toc a { text-decoration:none; padding:6px 10px; border-radius:999px; border:1px solid var(--border-color); color: var(--text-color); background: var(--card-bg); font-weight:600; }
+    .toc a:hover { background: var(--section-bg); }
+    /* Images identiques */
+    .section-image { width:100%; aspect-ratio: 16/9; height:auto; object-fit: cover; border-radius: 8px; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+   <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <img src="image/logo.jpg" alt="Agrobusiness Summit" class="logo">
+                    <span class="brand-text">Agrobusiness Summit</span>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.php" class="nav-link active">Accueil</a>
+                    <a href="annuaire.php" class="nav-link">Annuaire</a>
+                    <a href="formations.php" class="nav-link">Formations</a>
+                    <a href="actualites.php" class="nav-link">Opportunités</a>
+                    <a href="networking.php" class="nav-link">Networking</a>
+                    <a href="inscription.php" class="nav-link">Inscription</a>
+                </div>
+                <button class="theme-toggle" id="themeToggle" title="Basculer le thème">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+  <main>
+    <section class="about-section">
+      <div class="container about">
+        <h1 class="section-title">À propos</h1>
+        <p class="section-subtitle">Présentation d'Agrobusiness Summit</p>
+
+        <div class="grid">
+          <div class="card">
+            <img class="section-image" src="image/4.jpg" alt="Contexte agricole en RDC">
+            <h2>1. Contexte</h2>
+            <p class="muted">Face à l’insécurité alimentaire persistante, à la montée du chômage des jeunes et à la dépendance croissante vis-à-vis des importations alimentaires, la République Démocratique du Congo doit repenser son modèle agricole. Avec une population estimée à plus de 100 millions d'habitants, dont 70 % sont engagés dans le secteur agricole, la République Démocratique du Congo représente un vivier exceptionnel pour le développement des chaînes de valeur agricoles. Pourtant, la productivité reste faible et l'autosuffisance alimentaire demeure un objectif lointain.</p>
+            <p class="muted">La République Démocratique du Congo dispose de l’un des plus grands potentiels agricoles au monde : près de 80 millions d’hectares de terres arables, un climat favorable et une population jeune. Pourtant, l’agriculture reste sous-développée, peu modernisée et insuffisamment valorisée. Les citoyens manquent souvent d’informations fiables pour se lancer, tandis que les entreprises agricoles opèrent souvent de manière isolée, sans synergie ni visibilité suffisante. Par conséquent, il existe donc un besoin urgent de mise en relation, d’information et de formation dans le secteur agricole.</p>
+          </div>
+
+          <div class="card">
+            <img class="section-image" src="image/3.jpg" alt="Concept du projet Agrobusiness Summit">
+            <h2>2. Concept du projet</h2>
+            <p class="muted">Agrobusiness Summit est une plateforme digitale conçue pour informer les citoyens sur les opportunités et les réalités du secteur agricole, donner de la visibilité aux entreprises agricoles et leurs produits/services, créer un espace de réseautage pour faciliter les partenariats et offrir des ressources de formation accessibles pour renforcer les compétences.</p>
+            <p class="muted">Elle s’inscrit dans cette dynamique en offrant une plateforme d’informations, de formations et d’innovations réunissant les principaux acteurs du secteur pour impulser un changement structurel par la technologie et l’entrepreneuriat.</p>
+          </div>
+
+          <div class="card">
+            <img class="section-image" src="image/6.jpg" alt="Objectifs du projet">
+            <h2>3. Objectifs du projet</h2>
+            <ul class="muted">
+              <li><strong>Informer</strong> : Centraliser et diffuser des informations pratiques et actualisées sur l’agriculture en RDC.</li>
+              <li><strong>Connecter</strong> : Servir de pont entre les citoyens, les entreprises agricoles, les coopératives, les institutions et les investisseurs.</li>
+              <li><strong>Former</strong> : Proposer des formations en ligne, ateliers et contenus pédagogiques pour initier et perfectionner les acteurs du secteur.</li>
+              <li><strong>Valoriser</strong> : Mettre en lumière le savoir-faire congolais et les initiatives locales, en favorisant l’émergence d’une nouvelle génération d’agro-entrepreneurs.</li>
+            </ul>
+            <h3>Public cible</h3>
+            <ul class="muted">
+              <li>Citoyens et jeunes entrepreneurs intéressés par l’agriculture.</li>
+              <li>Entreprises agricoles locales (PME, startups, coopératives).</li>
+              <li>Investisseurs et institutions cherchant à comprendre le marché.</li>
+              <li>ONG et partenaires au développement souhaitant appuyer le secteur.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="section-image" src="image/1.jpg" alt="Impact attendu">
+            <h2>4. Impact attendu</h2>
+            <ul class="muted">
+              <li>Accroître la visibilité des acteurs agricoles congolais.</li>
+              <li>Favoriser les synergies et partenariats entre entreprises.</li>
+              <li>Encourager la création de nouvelles initiatives agricoles.</li>
+              <li>Contribuer à la sécurité alimentaire et à la création d’emplois en RDC.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <img class="section-image" src="image/17.jpg" alt="Vision et Mission">
+            <h2>5. Vision &amp; Mission</h2>
+            <h3>Vision</h3>
+            <p class="muted">Faire de l’agriculture un moteur de développement économique et social en RDC grâce à la technologie et à l’innovation.</p>
+            <h3>Mission</h3>
+            <p class="muted">Connecter, informer et former les acteurs agricoles afin de transformer le potentiel du pays en opportunités concrètes.</p>
+          </div>
+
+          <div class="card">
+            <img class="section-image" src="image/20.jpg" alt="Conclusion">
+            <h2>6. Conclusion</h2>
+            <p class="muted">Agrobusiness Summit n’est pas seulement une plateforme digitale, mais une véritable passerelle vers la transformation agricole en République Démocratique du Congo. En réunissant informations, formations et opportunités de collaboration, le projet ambitionne de stimuler l’innovation, de renforcer la visibilité des acteurs locaux et de créer un environnement favorable au développement de l’agro-industrie.</p>
+            <p class="muted">Dans un pays au potentiel agricole inestimable, Agrobusiness Summit se positionne comme un catalyseur, capable d’accompagner les citoyens, les entreprises et les investisseurs vers un avenir où l’agriculture devient non seulement un moteur de croissance économique, mais aussi une source durable d’emplois et de sécurité alimentaire pour les générations futures.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+ 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Agrobusiness Summit</h4>
+                    <p>Plateforme de référence pour l'agrobusiness en RDC</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="annuaire.php">Annuaire</a></li>
+                        <li><a href="formations.php">Formations</a></li>
+                        <li><a href="actualites.php">Actualités</a></li>
+                        <li><a href="networking.php">Networking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: contact@agrobusiness-rdc.com</p>
+                    <p>Tél: +243 XX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agrobusiness Summit. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="scripts/main.js"></script>
+    <script>
+        // Slider functionality
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.querySelector('.slider-btn.prev');
+        const nextBtn = document.querySelector('.slider-btn.next');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            slides[index].classList.add('active');
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        if (nextBtn && prevBtn) {
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+        }
+
+        // Auto-slide
+        setInterval(nextSlide, 5000);
+
+        // Load stats from JSON (placeholder for now)
+        fetch('/Agrobusiness/data/annuaire.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('entreprises-count').textContent = data.annuaire ? data.annuaire.length + '+' : '150+';
+            })
+            .catch(() => {});
+
+        fetch('/Agrobusiness/data/formations.json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('formations-count').textContent = data.formations ? data.formations.length + '+' : '50+';
+            })
+            .catch(() => {});
+    </script>s
+
+</body>
+</html>
