@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles/globals.css">
   <link rel="stylesheet" href="styles/components.css">
   <script>
-    (function(){ try{var t=localStorage.getItem('theme'); if(t){document.documentElement.setAttribute('data-theme',t);} }catch(e){} })();
+    (function(){ try{var t=localStorage.getItem('theme') || 'light'; if(t){document.documentElement.setAttribute('data-theme',t); document.body.setAttribute('data-theme',t);} }catch(e){} })();
   </script>
   <style>
     .about-section { background: var(--section-bg); padding: 60px 0; }
