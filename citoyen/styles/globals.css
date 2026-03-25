@@ -20,7 +20,6 @@
   --btn-outline-border: #65a605;
 }
 
-/* Thème sombre
   [data-theme="dark"] {
  
   --bg-color: #141414;
@@ -39,7 +38,7 @@
  
   --primary-green: #008B5F;
   --secondary-green: #008B5F;
-} */
+}
 
 /* Overrides pour lisibilité du header en thème sombre (nav blanche) */
 [data-theme="dark"] .navbar .nav-link { color: #141414; }
